@@ -13484,14 +13484,7 @@ $(document).ready(function(){
 <h3 id="Let's-continue-our-exploration,-We'll-start-with-taking-a-look-at-Estimated-Returns">Let's continue our exploration, We'll start with taking a look at Estimated Returns<a class="anchor-link" href="#Let's-continue-our-exploration,-We'll-start-with-taking-a-look-at-Estimated-Returns">&#182;</a></h3><h2 id="4--Estimated-Returns">4- Estimated Returns<a class="anchor-link" href="#4--Estimated-Returns">&#182;</a></h2>
 </div>
 </div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Most-of-our-loans-have-an-estimated-return-between-0%-and-20%">Most of our loans have an estimated return between 0% and 20%<a class="anchor-link" href="#Most-of-our-loans-have-an-estimated-return-between-0%-and-20%">&#182;</a></h3>
-</div>
-</div>
-</div></div></section><section>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
@@ -13538,118 +13531,9 @@ $(document).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="the-distribution-is-right-skewed.">the distribution is right skewed.<a class="anchor-link" href="#the-distribution-is-right-skewed.">&#182;</a></h2><h3 id="It-also-looks-like-there-are-some-peaks-in-some-standard-values-such-as-5%,-7.5%,-12.5%,-and-15%.-Most-curiously-the-largest-bin-falls-right-around-12.5%.">It also looks like there are some peaks in some standard values such as 5%, 7.5%, 12.5%, and 15%. Most curiously the largest bin falls right around 12.5%.<a class="anchor-link" href="#It-also-looks-like-there-are-some-peaks-in-some-standard-values-such-as-5%,-7.5%,-12.5%,-and-15%.-Most-curiously-the-largest-bin-falls-right-around-12.5%.">&#182;</a></h3>
+<h2 id="the-distribution-is-right-skewed.">the distribution is right skewed.<a class="anchor-link" href="#the-distribution-is-right-skewed.">&#182;</a></h2><h3 id="Most-of-our-loans-have-an-estimated-return-between-0%-and-20%-.-It-also-looks-like-there-are-some-peaks-in-some-standard-values-such-as-5%,-7.5%,-12.5%,-and-15%.-Most-curiously-the-largest-bin-falls-right-around-12.5%.">Most of our loans have an estimated return between 0% and 20% . It also looks like there are some peaks in some standard values such as 5%, 7.5%, 12.5%, and 15%. Most curiously the largest bin falls right around 12.5%.<a class="anchor-link" href="#Most-of-our-loans-have-an-estimated-return-between-0%-and-20%-.-It-also-looks-like-there-are-some-peaks-in-some-standard-values-such-as-5%,-7.5%,-12.5%,-and-15%.-Most-curiously-the-largest-bin-falls-right-around-12.5%.">&#182;</a></h3>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Functions">Functions<a class="anchor-link" href="#Functions">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">HeatMap</span><span class="p">(</span><span class="n">VariablesList</span> <span class="p">,</span> <span class="n">figSize</span> <span class="p">,</span> <span class="n">figTitle</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="n">figSize</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="n">figTitle</span><span class="p">)</span>
-    <span class="n">sb</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">VariablesList</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(),</span> <span class="n">annot</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">fmt</span> <span class="o">=</span> <span class="s1">&#39;.3f&#39;</span><span class="p">,</span><span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;vlag_r&#39;</span><span class="p">,</span> <span class="n">center</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ModifyData</span><span class="p">():</span>
-    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;IncomeRange&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">([</span><span class="s1">&#39;Not employed&#39;</span><span class="p">,</span> <span class="s1">&#39;Not displayed&#39;</span><span class="p">],</span> <span class="s1">&#39;$0&#39;</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-    <span class="n">ordinal_rating</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;$100,000+&#39;</span><span class="p">,</span> <span class="s1">&#39;$75,000-99,999&#39;</span><span class="p">,</span> <span class="s1">&#39;$50,000-74,999&#39;</span><span class="p">,</span> <span class="s1">&#39;$25,000-49,999&#39;</span><span class="p">,</span> <span class="s1">&#39;$1-24,999&#39;</span><span class="p">,</span> <span class="s1">&#39;$0&#39;</span><span class="p">]</span>
-    <span class="n">ordered_var</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">CategoricalDtype</span><span class="p">(</span><span class="n">ordered</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">categories</span> <span class="o">=</span> <span class="n">ordinal_rating</span><span class="p">)</span>
-    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;IncomeRange&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;IncomeRange&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">ordered_var</span><span class="p">)</span>
-
-    <span class="n">rate_order</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;HR&#39;</span><span class="p">,</span><span class="s1">&#39;E&#39;</span><span class="p">,</span><span class="s1">&#39;D&#39;</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;AA&#39;</span><span class="p">]</span>
-    <span class="n">ordered_var</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">CategoricalDtype</span><span class="p">(</span><span class="n">ordered</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span><span class="n">categories</span> <span class="o">=</span> <span class="n">rate_order</span><span class="p">)</span>
-    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;ProsperRating (Alpha)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;ProsperRating (Alpha)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">ordered_var</span><span class="p">)</span>
-    
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">DataSample</span><span class="p">(</span><span class="n">dataframe</span><span class="p">):</span>
-    <span class="n">samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">dataframe</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">int</span><span class="p">(</span><span class="n">dataframe</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*.</span><span class="mi">005</span><span class="p">),</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
-    <span class="n">df_samp</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">samples</span><span class="p">,:]</span>
-    <span class="k">return</span> <span class="n">df_samp</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">BoxPlot</span><span class="p">(</span><span class="n">Data</span><span class="p">,</span><span class="n">figSize</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">Title</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="n">figSize</span><span class="p">)</span>
-    <span class="n">base_color</span> <span class="o">=</span> <span class="n">sb</span><span class="o">.</span><span class="n">color_palette</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">sb</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">Data</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">Y</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">X</span><span class="p">,</span> <span class="n">palette</span> <span class="o">=</span> <span class="s2">&quot;Blues_r&quot;</span><span class="p">,</span> <span class="n">showfliers</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="n">Title</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input_hidden">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ClusteredChart</span><span class="p">(</span><span class="n">Data</span><span class="p">,</span><span class="n">figSize</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">HUE</span><span class="p">,</span><span class="n">Title</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="n">figSize</span><span class="p">)</span>
-    <span class="n">sb</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">Data</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">X</span><span class="p">,</span> <span class="n">hue</span> <span class="o">=</span> <span class="n">HUE</span><span class="p">,</span><span class="n">palette</span> <span class="o">=</span> <span class="s1">&#39;Blues_r&#39;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">Title</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13809,13 +13693,6 @@ $(document).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="(Term-,-ProsperRating-,-EmploymentStatus)-with-StatedMonthlyIncome-{BoxPlot}">(Term , ProsperRating , EmploymentStatus) with StatedMonthlyIncome {BoxPlot}<a class="anchor-link" href="#(Term-,-ProsperRating-,-EmploymentStatus)-with-StatedMonthlyIncome-{BoxPlot}">&#182;</a></h2>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Multivariate-Exploration">Multivariate Exploration<a class="anchor-link" href="#Multivariate-Exploration">&#182;</a></h1><h3 id="I-want-to-explore-in-this-part-of-the-analysis-is-how-the-categorical-variable-(Prosper-rating-and-term)-play-into-the-relationship-between-borrower-APR-and-loan-original-amount.">I want to explore in this part of the analysis is how the categorical variable (Prosper rating and term) play into the relationship between borrower APR and loan original amount.<a class="anchor-link" href="#I-want-to-explore-in-this-part-of-the-analysis-is-how-the-categorical-variable-(Prosper-rating-and-term)-play-into-the-relationship-between-borrower-APR-and-loan-original-amount.">&#182;</a></h3>
 </div>
 </div>
@@ -13861,11 +13738,27 @@ $(document).ready(function(){
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input_hidden">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+
 </div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="the-borrower-APR-decrease-with-the-increase-of-borrow-term-for-people-with-HR-D-raings">the borrower APR decrease with the increase of borrow term for people with HR-D raings<a class="anchor-link" href="#the-borrower-APR-decrease-with-the-increase-of-borrow-term-for-people-with-HR-D-raings">&#182;</a></h3><h3 id="the-borrower-APR-increase-with-the-increase-of-borrow-term-for-people-with-A-AA-raings">the borrower APR increase with the increase of borrow term for people with A-AA raings<a class="anchor-link" href="#the-borrower-APR-increase-with-the-increase-of-borrow-term-for-people-with-A-AA-raings">&#182;</a></h3><h3 id="the-borrower-APR-still-much-the-same-with-the-increase-of-borrow-term-for-people-with-C-and-B-raings">the borrower APR still much the same with the increase of borrow term for people with C and B raings<a class="anchor-link" href="#the-borrower-APR-still-much-the-same-with-the-increase-of-borrow-term-for-people-with-C-and-B-raings">&#182;</a></h3>
+<h3 id="there-is-a-interaction-between-term-and-rating.-We-can-see-that-with-better-Prosper-rating,-the-loan-amount-of-all-three-terms-increases,-the-increase-amplitude-of-loan-amount-between-terms-also-becomes-larger.">there is a interaction between term and rating. We can see that with better Prosper rating, the loan amount of all three terms increases, the increase amplitude of loan amount between terms also becomes larger.<a class="anchor-link" href="#there-is-a-interaction-between-term-and-rating.-We-can-see-that-with-better-Prosper-rating,-the-loan-amount-of-all-three-terms-increases,-the-increase-amplitude-of-loan-amount-between-terms-also-becomes-larger.">&#182;</a></h3><h3 id="the-borrower-APR-decrease-with-the-increase-of-borrow-term-for-people-with-HR-D-raing-and-the-borrower-APR-increase-with-the-increase-of-borrow-term-for-people-with-A-AA-raings-and-the-borrower-APR-still-much-the-same-with-the-increase-of-borrow-term-for-people-with-C-and-B-raings">the borrower APR decrease with the increase of borrow term for people with HR-D raing and the borrower APR increase with the increase of borrow term for people with A-AA raings and the borrower APR still much the same with the increase of borrow term for people with C and B raings<a class="anchor-link" href="#the-borrower-APR-decrease-with-the-increase-of-borrow-term-for-people-with-HR-D-raing-and-the-borrower-APR-increase-with-the-increase-of-borrow-term-for-people-with-A-AA-raings-and-the-borrower-APR-still-much-the-same-with-the-increase-of-borrow-term-for-people-with-C-and-B-raings">&#182;</a></h3>
 </div>
 </div>
 </div></div></section></section>
