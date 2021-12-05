@@ -27,4 +27,6 @@ I visualized the following features:
 4. Term
 5. ProsperRating 
 ## Key Insights for Presentation
-I begin with introducing the features of interest one by one, followed by how they relate to one another and eventually how they correlate with estimated returns and BorrowerAPR
+I begin with introducing the features of interest one by one, followed by how they relate to one another and eventually how they correlate with estimated returns and BorrowerAPR.
+
+Features that affect the borrower APR, which are original loan amount, Prosper rating. I started by showing the distribution of borrower APR and loan amount variable. Then, I showed the relationship between APR vs. loan amount etc.
